@@ -13,15 +13,15 @@ public class MainClass {
     }
 
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter no of jobs");
-        int numOfJobs = sc.nextInt();
+        int numOfJobs = input.nextInt();
         int[][] jobArray = new int[numOfJobs][3];
         System.out.println("Enter arrival time and burst time");
         for (int count = 0; count < numOfJobs; count++) {
             System.out.println("For process" + count);
-            jobArray[count][0] = sc.nextInt();
-            jobArray[count][1] = sc.nextInt();
+            jobArray[count][0] = input.nextInt();
+            jobArray[count][1] = input.nextInt();
             jobArray[count][2] = count;
         }
         JobSchedular job = new JobSchedular(numOfJobs, jobArray);
@@ -38,6 +38,6 @@ public class MainClass {
         System.out.println("Maximum waiting time is: " + maximumWait);
         double average = job.getAverageWaitingTime();
         System.out.println("Average waiting time is: " + average);
-        sc.close();
+        input.close();
     }
 }
