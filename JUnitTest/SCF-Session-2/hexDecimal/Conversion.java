@@ -26,16 +26,16 @@ public class Conversion {
      */
     public int toInt(String hexaDecimal) {
         int numberArray[] = new int[hexaDecimal.length()];
-        char c;
+        char hexCharachter;
         int number = 0, base;
         for (int counter = 0; counter < hexaDecimal.length(); counter++) {
-            c = hexaDecimal.charAt(hexaDecimal.length() - counter - 1);
-            if (Character.isDigit(c)) {
-                numberArray[counter] = Character.getNumericValue(c);
+            hexCharachter = hexaDecimal.charAt(hexaDecimal.length() - counter - 1);
+            if (Character.isDigit(hexCharachter)) {
+                numberArray[counter] = Character.getNumericValue(hexCharachter);
                 continue;
             } else {
                 for (int check = 10; check < 16; check++) {
-                    if (hexArray[check] == c) {
+                    if (hexArray[check] == chexCharachter {
                         numberArray[counter] = check;
                         break;
                     }
@@ -59,11 +59,11 @@ public class Conversion {
     public String toHex(int Decimalnumber) {
         int number = Decimalnumber, remainder;
         String hexNumberReverse = "", hexNumber = "";
-        char c;
+        char hexCharachter;
         while (number != 0) {
             remainder = number % 16;
-            c = hexArray[remainder];
-            hexNumberReverse += c;
+            hexCharachter = hexArray[remainder];
+            hexNumberReverse += hexCharachter;
             number = number / 16;
         }
         for (int i = 0; i < hexNumberReverse.length(); i++) {
