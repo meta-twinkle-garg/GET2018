@@ -4,9 +4,16 @@ package GraphicsLibrary;
 import java.util.List;
 
 import GraphicsLibrary.Shapes.ShapeType;
-
+/***
+* Class Shape Factory will create shape objects accordind to parameters
+*/
 public class ShapeFactory {
     static int count;
+    
+    /**
+    * This method will create shape object according to shape type and parameters list
+    * @return shape object
+    */
     static Shapes createShape(ShapeType type,Point point,List<Integer> list){
         Shapes shape=null;
         int id=count++;
