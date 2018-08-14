@@ -155,15 +155,15 @@ public class GraphImplementation implements GraphInterface {
      */
     private boolean isCycle(List<Edge> visitedEdges, Edge edge) {
         int startVertex = edge.getSource();
-        List<Edge> tempList = new ArrayList<Edge>();
+        List<Edge> listOfEdges = new ArrayList<Edge>();
         for (Edge graphEdge : visitedEdges) {
-            tempList.add(graphEdge);
+            listOfEdges.add(graphEdge);
         }
         while (startVertex != edge.getDestination()) {
             if (startVertex == -1) {
                 return false;
             }
-            int endVertex = findEndVertex(tempList, startVertex);
+            int endVertex = findEndVertex(listOfEdges, startVertex);
             startVertex = endVertex;
         }
         if (startVertex == edge.getDestination()) {
@@ -181,17 +181,17 @@ public class GraphImplementation implements GraphInterface {
      *            is a vertex
      * @return end vertex
      */
-    private int findEndVertex(List<Edge> tempList, int startVertex) {
-        for (int count = 0; count < tempList.size(); count++) {
-            if (tempList.get(count).getSource() == startVertex) {
-                int vertex = tempList.get(count).getDestination();
-                tempList.remove(count);
+    private int findEndVertex(List<Edge> listOfEdges, int startVertex) {
+        for (int count = 0; count < listOfEdges.size(); count++) {
+            if (listOfEdges.get(count).getSource() == startVertex) {
+                int vertex = listOfEdges.get(count).getDestination();
+                listOfEdges.remove(count);
                 return vertex;
 
             } else {
-                if (tempList.get(count).getDestination() == startVertex) {
-                    int vertex = tempList.get(count).getSource();
-                    tempList.remove(count);
+                if (listOfEdges.get(count).getDestination() == startVertex) {
+                    int vertex = listOfEdges.get(count).getSource();
+                    listOfEdges.remove(count);
                     return vertex;
                 }
             }
