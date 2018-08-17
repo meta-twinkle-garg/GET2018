@@ -147,3 +147,6 @@ select * from product;
 
 #Assignment 3
 
+select * from orders ORDER BY time LIMIT 50;
+
+select * from orders ORDER BY amount LIMIT 10;
