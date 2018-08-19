@@ -1,3 +1,4 @@
+create database storefront;
 use storefront;
 create table User(
 Id INT PRIMARY KEY AUTO_INCREMENT,
@@ -25,7 +26,7 @@ FOREIGN KEY(Parent_Id) REFERENCES category(Id));
 
 ALTER TABLE product_category ADD FOREIGN KEY(Product_Id) REFERENCES Product(Id);
 ALTER TABLE product_category ADD FOREIGN KEY(Category_Id) REFERENCES Category(Id);
-ALTER TABLE category ADD FOREIGN KEY(Parent_Category) REFERENCES category(Id);
+
 
 create table image(
 Id INT PRIMARY KEY AUTO_INCREMENT,
@@ -54,9 +55,9 @@ alter table product add quantity INT UNSIGNED;
 
 create table orders(
 Id INT PRIMARY KEY AUTO_INCREMENT,
-Time DATE,
+Date_of_order_placed DATE,
 Amount INT,
-Shipping_Address VARCHAR(300),
+Shipping_Address INT,
 User_Id INT);
 
 create table Item_List(
@@ -142,11 +143,43 @@ select name as Product_Name from product where quantity<50;
 
 update product set quantity=quantity+100;
 
-select * from product;
+select * from orders;
 
 
 #Assignment 3
 
-select * from orders ORDER BY time LIMIT 50;
+select * from orders ORDER BY date_of_order_placed LIMIT 50;
 
 select * from orders ORDER BY amount LIMIT 10;
+
+insert into item_list (product_id, order_number, status) values
+(4, 1, 'Cancelled'),
+(5, 1, 'Shipped');
+
+LOAD DATA LOCAL INFILE  "C:/Users/Home/Documents/orders_list.txt" INTO TABLE ORDERS;
+SELECT DAY(date_of_order_placed)  from orders where id=2;
+
+SELECT o.id, o.date_of_order_placed, o.user_id, o.amount from orders AS o, item_list AS i where DATEDIFF(CURDATE(), o.date_of_order_placed) > 10 AND 
+o.id=i.order_number AND i.status!='Shipped';
+
+SELECT  u9.id, u.name, o.amount, o.date_of_order_placed, o.id
+ from user as u, orders as o 
+where u.id=o.user_id AND DATEDIFF(CURDATE(), o.date_of_order_placed) <=15;
+
+SELECT i.id, p.name 
+from item_list AS i, product AS p 
+where i.order_number=1 AND i.product_id=p.id;
+
+SELECT p.name, p.price, o.date_of_order_placed
+from orders as o, product as p, item_list as i
+where i.order_number=o.id AND i.product_id=p.id AND p.price BETWEEN 20 AND 50;
+
+update i set i.status='Shipped' 
+from orders o, itme_list i
+where o.date_of_order_placed=CURDATE() LIMIT 20;
+
+
+
+
+
+
