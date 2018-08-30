@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+	<head>
+		<title> Metacube Training Assignment </title>
+		<script src="javaScriptFile.js"></script>
+		 <link rel="stylesheet" href="CSSFile.css">
+
+	</head>
+	<body >
+		<table width="100%" cellpadding=20 id="head" >
+			<tr>
+			<td><img src="C:\Users\User21\Downloads\html-logo.png" height="70"></td>
+			<td align="right"><a href="home.html">Home</a>
+			<a href="about.html">Abo
+                ut</a>
+			<a href="product.html">Product</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="contact.html">Contact</a>
+			<a href="login.html">Login</a>
+			<a href="signUp.html">Sign Up</a>
+			</td>
+			</tr>
+		</table>
+		<hr>
+		<br>
+		<br>
+		<form id= "formSignUp" action="profile.html" onsubmit="return validateForm()" method="post">
+			<table align="center" id="signUp">
+				<tr>
+					<td> First Name</td>
+					<td> <input type="text" id="firstName" name="firstName"> </td>
+				</tr>
+				<tr>
+					<td> Last Name</td>
+					<td> <input type="text" id="lastName" name="lastName"> </td>
+				</tr>
+				<tr>
+					<td> Email</td>
+					<td> <input type="text" name="email" id="email"> </td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td> <input type="password" name="password" id="password" onkeyup="return checkPassword()"/>
+
+					</td>
+				</tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <span id="strength"></span>
+                    </td>
+                </tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td> <input type="password" name="confirm" id="confirm" onkeyup="return confirmPassword()">
+
+                    </td>
+				</tr>
+				<tr>
+                    <td colspan="2" align="right">
+                    <span id="match"></span>
+                    </td>
+                </tr>
+				<tr>
+					<td> Contact Number</td>
+					<td> <input type="text" id="contact" name="contact"> </td>
+				</tr>
+				<tr>
+					<td> Company/Institution </td>
+					<td> <select>
+							<option value="Metacube">Metacube</option>
+							<option value="SKIT">SKIT</option>
+							<option value="JECRC"> JECRC </option>
+							<option value="Arya College"> Arya College</option>
+						</select>
+					</td>
+				</tr>
+				<tr >
+					<td colspan="2" align="center"> <input type="submit" value="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
