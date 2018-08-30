@@ -1,0 +1,23 @@
+   table#head{
+                margin: 0;
+                padding:0;
+                background-color: dimgrey;
+                color: darkcyan;
+                border-radius: 20px;
+            }
+            
+            a:link{
+                color:brown;
+                padding: 9px 15px;
+                border-radius: 10px;
+                background-color: bisque
+                
+            }
+            input[type=text], select, input[type=password] {
+            width: 300px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
