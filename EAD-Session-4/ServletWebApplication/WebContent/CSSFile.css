@@ -1,0 +1,37 @@
+table#head{
+    margin: 0;
+    padding:0;
+    background-color: dimgrey;
+    color: darkcyan;
+    border-radius: 20px;
+}
+table#profile{
+	margin:10px;
+	padding:15px;
+}
+            
+a:link{
+    text-decoration:none;
+    color:azure;
+    font-size: 14;
+    padding:5px 5px;           
+}
+a:visited{
+    text-decoration:none;
+    color:burlywood;
+    font-size: 14;
+    padding:5px 5px;
+
+                
+}
+#profile td, tr{
+	align:center;
+}
+input[type=text], select, input[type=password],input[type=date] {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
