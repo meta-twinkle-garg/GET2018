@@ -43,4 +43,22 @@ public class CategoryDAO {
 		}
 		return rows;
 	}
+
+	public int updateCategory(String category, String newCategory) {
+		String query="UPDATE Category SET Category_Name=? WHERE Category_Name=?";
+		int rows=0;
+		try {
+
+			Connection conn = ConnectionDAO.getConnection();
+
+			PreparedStatement stmt = conn.prepareStatement(query);
+			stmt.setString(1, newCategory);
+			stmt.setString(2,category);
+			rows = stmt.executeUpdate();
+
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return rows;
+	}
 }
