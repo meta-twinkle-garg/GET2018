@@ -53,8 +53,15 @@ public class LogInController extends HttpServlet {
 					+ user.getFirstName()
 					+ " "
 					+ user.getLastName()
-					+ "<img src='html-logo.png' height='15'>"
-					+ "</td></tr></table><hr><br><br>"
+					+ "<img src=' C:/Users/User21/JavaEEWorkspace/ServletWebApplication/images/";
+					if(user.getImage()==null){
+						html+="html-logo.png'";
+					}else{
+						html+=user.getImage();
+					}
+					html+= " height='15'><form action=ImageUploadController method='post' "
+							+"enctype='multipart/form-data'></input type='file' name='file' id='file'>" 
+							+"<form></td></tr></table><hr><br><br>"
 					+ "<table align='center' id='profile'>"
 					+ "<tr><td colspan='2'><h1>User Profile</h1></td></tr><tr><td>First Name</td><td>"
 					+ user.getFirstName()
