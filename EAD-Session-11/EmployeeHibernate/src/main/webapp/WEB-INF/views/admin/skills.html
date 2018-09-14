@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta charset="ISO-8859-1">
+<title>Skills</title>
+
+</head>
+<body>
+	<table width="100%" cellpadding=20 id="head">
+		<tr>
+			<td>Hello Admin..!!</td>
+			<td align="right">
+			<a th:href="@{/admin/projects}">Projects | </a>
+			<a th:href="@{/admin/skills}">Skills | </a>
+			<a th:href="@{/admin/jobs}">Jobs | </a>
+			<a th:href="@{/admin/employees}">Employee | </a>
+			<a th:href="@{/admin/logout}">Logout | </a>
+			</td>
+		</tr>
+	</table>
+<a th:href="@{/admin/skills/add}">Add Skills  </a> <br>
+<div class="container">
+		<div th:if="${not #lists.isEmpty(skills)}">
+			<h2><center>All skills</center></h2>
+			<table cellpadding=20 align="center">
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Edit</th>
+					<th>Delete</th>
+				</tr>
+				<tr th:each="skill : ${skills}">
+					<td th:text="${skill.id}">Id</td>
+					<td th:text="${skill.name}">Name</td>
+					<td><a th:href="${'skills/edit?id=' + skill.id}"
+						class="btn btn-default">Edit</a></td>
+					<td><a th:href="${'skills/delete?id=' + skill.id}"
+						class="btn btn-danger">Delete</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	</body>
+</html>
