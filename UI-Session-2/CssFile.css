@@ -1,0 +1,179 @@
+#header1, #footer_1{
+	display:inline-block;
+	width:33%;
+}
+#header2, #footer_2{
+	display:inline-block;
+	width:33%;
+}
+#header2 a, #footer_2 a{
+	text-decoration:none;
+	padding:10px;
+	color:white;
+}
+#header3, #footer_3{
+	display:inline-block;
+	width:33%;
+}
+#header3 img, #footer_3 img{
+	padding:10px;
+}
+#top{
+	background-image: url("images/homebg.png");
+	background-size: cover;
+}
+#head, #footer{
+	height:25px;
+	padding:30px;
+	text-align: center;
+	
+}
+#footer{
+	height:70px;
+}
+#part1{
+	padding-top:80px;
+	height:100%;
+}
+#subpart1_1{
+	display:inline-block;
+	width:40%;
+	vertical-align: top;
+    padding-left: 10%;
+	font-size:30;
+	color:white;
+}
+#subpart1_1 a{
+	text-decoration:none;
+	padding: 10px;
+	font-size:15;
+	color:white;
+}
+#part2,#screenshot, #reviews{
+		background-image: url("images/bodybg.png");
+}
+
+#subpart1_2{
+	display:inline-block;
+	width:30%;
+}
+#subpart2_1, #subpart2_2, #subpart2_3{
+	display:inline-block;
+	width:30%;	
+	margin-top:30px;
+}
+#subpart2_1{
+	margin-left:9%;
+}
+#part2Img{
+    text-align:center;
+	padding-top:30px;
+}
+.subpart2{
+	display:inline-block;
+	width:50%;	
+}
+.subpart2Img{
+	display:inline-block;
+	width:30%;	
+}
+
+#part2_head{
+	text-align:center;
+}
+#part2_head h1{
+	color:7AA7F5;
+}
+#downloadImg{
+	background-color:red;
+	margin-right:10px;
+}
+#featureImg{
+	background-color:blue;
+}
+#part3 {
+	text-align:center;
+}
+#part3 h1{
+	color:7AA7F5;
+}
+#screen1_1, #screen3_1{
+	display:inline-block;
+	width:30%;
+	vertical-align:top;
+	padding-left:20%;
+	padding-top:10%;
+}
+#screen2_1{
+	display:inline-block;
+	width:30%;
+	vertical-align:top;
+	padding-top:10%;
+	padding-left:10%;
+}
+#screen1_2, #screen3_2{
+	display:inline-block;
+	width:30%;
+	padding-top:20%;
+	padding-left:10px;
+	vertical-align:middle;
+}
+#screen2_2{
+	display:inline-block;
+	width:30%;
+	vertical-align:middle;
+	padding-top:20%;
+	padding-left:15%;
+}
+#part4{
+	padding-top:10%;
+	text-align:center;
+	padding-bottom:5%;
+}
+#part4 h1{
+	color: 7AA7F5;
+}
+
+.review-left{
+	display:inline-block;
+	width:30%;
+	padding-left:15%;
+	padding-right:5%;
+	padding-bottom:5%;
+	vertical-align:top;
+	
+}
+.review-right{
+	display:inline-block;
+	width:30%;
+	padding-left:5%;
+	padding-bottom:5%;
+	vertical-align:top;
+	padding-right:10%;
+}
+#part5{
+	background-image: url("images/downloadbg.png");
+	background-size: cover;
+	
+	
+}
+#part5_1{
+	color:white;
+	display:inline-block;
+	width:40%;
+	padding-left:10%;
+	padding-top:7%;
+	vertical-align:top;
+}
+#part5_1 a{
+	padding-right:10px;
+}
+#part5_2{
+	padding-top:10%;
+	display:inline-block;
+	width:40%;
+	padding-left:5%;
+}
+#footer{
+	background-color:6C727C;
+}
