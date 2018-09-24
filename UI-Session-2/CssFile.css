@@ -1,26 +1,24 @@
-#header1, #footer_1{
-	display:inline-block;
-	width:33%;
+#header{
+    display:flex;
+    color:white;
+    justify-content: space-around;
+    padding-top: 5%;
 }
-#header2, #footer_2{
-	display:inline-block;
-	width:33%;
+header a{
+    color:white;
+    text-decoration: none;
+    padding-right: 10px;
 }
-#header2 a, #footer_2 a{
-	text-decoration:none;
-	padding:10px;
-	color:white;
-}
-#header3, #footer_3{
-	display:inline-block;
-	width:33%;
-}
+
+
 #header3 img, #footer_3 img{
 	padding:10px;
+    height:20px;
 }
 #top{
 	background-image: url("images/homebg.png");
 	background-size: cover;
+
 }
 #head, #footer{
 	height:25px;
@@ -34,14 +32,14 @@
 #part1{
 	padding-top:80px;
 	height:100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 #subpart1_1{
-	display:inline-block;
-	width:40%;
 	vertical-align: top;
-    padding-left: 10%;
 	font-size:30;
 	color:white;
+    width:40%;
 }
 #subpart1_1 a{
 	text-decoration:none;
@@ -51,19 +49,24 @@
 }
 #part2,#screenshot, #reviews{
 		background-image: url("images/bodybg.png");
+    background-size: contain;
 }
-
-#subpart1_2{
-	display:inline-block;
-	width:30%;
+#subpart2{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 #subpart2_1, #subpart2_2, #subpart2_3{
-	display:inline-block;
-	width:30%;	
+	
 	margin-top:30px;
 }
-#subpart2_1{
-	margin-left:9%;
+#screenshot{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex-direction: column;
 }
 #part2Img{
     text-align:center;
@@ -77,7 +80,14 @@
 	display:inline-block;
 	width:30%;	
 }
-
+#screen1,#screen2,#screen3{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-right: 5%;
+    vertical-align: bottom;
+    
+}
 #part2_head{
 	text-align:center;
 }
@@ -97,34 +107,7 @@
 #part3 h1{
 	color:7AA7F5;
 }
-#screen1_1, #screen3_1{
-	display:inline-block;
-	width:30%;
-	vertical-align:top;
-	padding-left:20%;
-	padding-top:10%;
-}
-#screen2_1{
-	display:inline-block;
-	width:30%;
-	vertical-align:top;
-	padding-top:10%;
-	padding-left:10%;
-}
-#screen1_2, #screen3_2{
-	display:inline-block;
-	width:30%;
-	padding-top:20%;
-	padding-left:10px;
-	vertical-align:middle;
-}
-#screen2_2{
-	display:inline-block;
-	width:30%;
-	vertical-align:middle;
-	padding-top:20%;
-	padding-left:15%;
-}
+
 #part4{
 	padding-top:10%;
 	text-align:center;
@@ -133,7 +116,11 @@
 #part4 h1{
 	color: 7AA7F5;
 }
-
+#screen1_2, #screen2_2, #screen3_2{
+    padding-top: 15%;
+    padding-left: 5%;
+    padding-right: 5%
+}
 .review-left{
 	display:inline-block;
 	width:30%;
@@ -153,7 +140,7 @@
 }
 #part5{
 	background-image: url("images/downloadbg.png");
-	background-size: cover;
+	background-size: contain;
 	
 	
 }
@@ -176,4 +163,15 @@
 }
 #footer{
 	background-color:6C727C;
+}
+img{
+    height:auto;
+}
+
+
+@media (max-width: 600px) { 
+    #header{
+        flex-direction: column;
+        text-align: center;
+    }
 }
