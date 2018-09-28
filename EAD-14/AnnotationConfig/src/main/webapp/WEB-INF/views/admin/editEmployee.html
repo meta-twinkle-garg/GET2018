@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit employee</title>
+
+</head>
+<body>
+	<table width="100%" cellpadding=20 id="head">
+		<tr>
+			<td>Hello Admin..!!</td>
+			<td align="right">
+			<a th:href="@{/admin/projects}">Projects | </a>
+			<a th:href="@{/admin/skills}">Skills | </a>
+			<a th:href="@{/admin/jobs}"> Jobs | </a>
+			<a th:href="@{/admin/employees}">Employee | </a>
+			<a th:href="@{/admin/logout}">Logout | </a>
+			</td>
+		</tr>
+	</table>
+<div>
+		<form  th:action="@{../employees}" method="post" align="center" >
+			<div th:object="${employee}">
+			<input type="hidden" th:field="*{id}" /> <br> <label>First Name:</label>
+			<input type="text" th:field="*{firstName}" /> <br> <label>Email ID:</label>
+			<input type="text" th:field="*{emailId}" /> <br> <label>Gender</label>
+			<input type="text" th:field="*{gender}" /><br><label>DOB</label>
+			<input type="date" th:field="*{dob}" /><br>
+			</div>
+			<div th:object="${jobDetails}">
+			<input type="hidden" th:field="*{id}" /> <br>
+	
+			<label>Date Of Joining :</label>
+			<input type="date" th:field="*{dateOfJoining}" /> <br> 
+			<label>Total experience: </label>
+			<input type="text" th:field="*{totalExp}" /><br> 
+			<label>Job Role: </label>
+			<select th:field="*{jobCode}">
+			<option th:each="job: ${jobs}" th:value="${job.id}" th:text="${job.title}"></option>
+			</select>
+			<br>
+			<label>Reporting Manager</label>
+			<select th:field="*{reportingManager}"><option
+								th:each="manager: ${managers}" th:value="${manager.id}"
+								th:text="${manager.firstName}"></option>
+			</select> <br>
+			<label>Team Lead</label>
+			<select th:field="*{teamLead}"><option
+								th:each="team: ${teamLead}" th:value="${team.id}"
+								th:text="${team.firstName}"></option>
+			</select> <br>
+			<label>Current Project</label>
+			<select th:field="*{projectId}"><option
+								th:each="currProj: ${projects}" th:value="${currProj.id}"
+								th:text="${currProj.name}"></option>
+			</select>
+			</div>
+			<button type="submit" class="btn btn-primary">Save</button>
+
+		</form>
+	</div>
+</body>
+</html>

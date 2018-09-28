@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta charset="ISO-8859-1">
+<title>Skills</title>
+</head>
+<body>
+<table width="100%" cellpadding=20 id="head">
+		<tr>
+			<td>Hello..!!</td>
+			<td align="right">
+			<a th:href="${'employees/edit?id=' + employee.id}">Edit Profile  </a>
+			<a th:href="@{/employee/logout}">Logout | </a>
+			<a th:href="${'employees/skills?id=' +employee.id}">Skills | </a>
+			</td>
+		</tr>
+	</table>
+	
+	<a th:href="${'../employees/addSkills?id=' +employee.id}">Add Skill</a>
+<div class="container">
+		<div th:if="${not #lists.isEmpty(skills)}">
+			<h2><center>My skills</center></h2>
+			<table cellpadding=20 align="center">
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					
+				</tr>
+				<tr th:each="skill : ${skills}">
+					<td th:text="${skill.id}">Id</td>
+					<td th:text="${skill.name}">Title</td>
+					
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
