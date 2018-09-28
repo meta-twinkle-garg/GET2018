@@ -9,7 +9,7 @@
     <body>
             <header>
             <nav>
-                <div id="header-logo">
+                <div>
                     <img src="images/logo.png">
                 </div>
                 <div id="header-links">
@@ -20,7 +20,7 @@
                         <li><a href="download.html">Download</a></li>
                     </ul>
                 </div>
-                <div id="header-social">
+                <div>
                  <ul>
                         <li><a href="facebook.com"><i class="fab fa-facebook-f "></i></a></li>
                         <li><a href="instagram.com"><i class="fab fa-instagram "></i></a></li>
@@ -31,6 +31,7 @@
             </header>
         
             <section id="cover">
+                <div id="inner-cover">
                 <div id="cover-text">
                     <h1>Get the most fun weather app</h1>
                     <a id="download-button" href="download.html">Download</a>
@@ -39,6 +40,7 @@
                 <div>
                     <img src="images/phone1.png">
                 </div>
+                    </div>
             </section>
             
             <section id="features">
@@ -86,11 +88,14 @@
                 <p> The brightest images </p>
             </div>
             <div class="screenshot-content">
-                <div>
+                <div class="container">
+                    <div class="watermark-images">Cloudy</div>
                     <img class="screenshot-images" src="images/screen01.png">
+                    <div class="circle-type" id="cloudy-circle">Cloudy</div>
+                    <div class="circle-degree" id="cloudy-degree">15 &deg;</div>
                 </div>
                 <div id="cloudy">
-                    <img class="images" src="images/cloud1.png" width="20%">
+                    <img src="images/cloud1.png" width="20%">
                     <h2>When the clouds</h2>
                     <p>Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends.</p>
                 </div>
@@ -101,14 +106,20 @@
                         <h2>When the clouds</h2>
                         <p>Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends.</p>
                 </div>
-                <div>
+                <div class="container">
+                    <div class="watermark-images">Sunny</div>
                     <img class="screenshot-images" src="images/screen02.png">
+                    <div class="circle-type" id="sunny-circle">Sunny</div>
+                    <div class="circle-degree" id="sunny-degree">25 &deg;</div>
                 </div>
                 
             </div>
             <div class="screenshot-content">
-                <div >
+                <div class="container">
+                    <div class="watermark-images">Rainy</div>
                     <img class="screenshot-images" src="images/screen03.png">
+                    <div class="circle-type" id="rainy-circle">Rainy</div>
+                    <div class="circle-degree" id="rainy-degree"> 9 &deg;</div>
                 </div>
                 <div id="rainy">
                     <img src="images/rainy1.png">
@@ -168,7 +179,7 @@
         </section>
         <footer>
             <nav>
-                <div id="footer-logo">
+                <div>
                     <img src="images/footer-logo.png">
                 </div>
                 <div id="footer-links">
@@ -179,7 +190,7 @@
                         <li><a href="download.html">Download</a></li>
                     </ul>
                 </div>
-                <div id="footer-social">
+                <div>
                  <ul>
                         <li><a href="facebook.com"><i class="fab fa-facebook-f "></i></a></li>
                         <li><a href="instagram.com"><i class="fab fa-instagram "></i></a></li>
