@@ -3,7 +3,9 @@
     padding: 0px;
     border: 0px black solid;
     font-size:20px;
+    font-family: ubuntu, sans-serif;
 }
+
 ul{
  list-style: none;   
 }
@@ -39,10 +41,9 @@ footer{
 nav{
     display:flex; 
     flex-direction: row;
+    width:1400px;
 }
-nav div{
-    width:33%;
-}
+
 header img, i{
     padding:20px 0px;
 }
@@ -70,14 +71,17 @@ header li, footer li{
 /* Cover styling */
 #cover{
     display:flex;
-    padding: 150px 200px;
+    padding: 150px;
     background-image: url("images/homebg.png");
 	background-size:cover;
     height:700px;
     background-repeat: no-repeat;
     background-position: center; 
 }
-
+#inner-cover{
+    width:1200px;
+    display: flex;
+}
 #cover h1{
     padding: 50px 0px;
     font-size: 4rem;
@@ -107,7 +111,7 @@ header li, footer li{
 
 #features{
     padding: 50px 0px;
-    width:80%;
+    width:1200px;
 }
 #features-content{
     display:flex;
@@ -129,7 +133,7 @@ header li, footer li{
 /* Screenshot styling */
 
 #screenshot{
-    width:80%;
+    width:1200px;
     display: flex;
     flex-direction: column;
 }
@@ -154,6 +158,63 @@ header li, footer li{
 .screenshot-images{
     padding: 0px 50px;
 }
+.container{
+    position: relative;
+}
+.watermark-images{
+    font-size: 10rem;
+    position: absolute;
+    left:40px;
+    top: 180px;
+    transform: rotate(90deg);
+    color:#DDDDDD;
+    z-index: -1;
+    width:650px;
+}
+.circle-type{
+    position:absolute;
+    left:300px;
+    top:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+.circle-degree{
+    position:absolute;
+    left:-20px;
+    top:390px;
+    height:80px;
+    width:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+#cloudy-circle{
+        background-color: #FCEC64;
+}
+#cloudy-degree{
+    background-color: #6CA3FF;
+}
+#sunny-circle{
+        background-color: #F2A14E;
+}
+#sunny-degree{
+    background-color: #FC6A42;
+}
+#rainy-circle{
+        background-color: #B8FAEE;
+}
+#rainy-degree{
+    background-color: #7693C8;
+}
 /* End of screenshot styling */
 
 /* Reviews styling */
@@ -161,7 +222,7 @@ header li, footer li{
 #reviews{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width:1200px;
 }
 #review-content{
     display: flex;
@@ -174,6 +235,9 @@ header li, footer li{
         width:40%;
     padding: 20px 20px;
 }
+#review-content p{
+    padding: 20px 0px;
+}
 .quote-end{
     float:right;
 }
@@ -185,7 +249,7 @@ header li, footer li{
 }
 #download-app-div{
     display: flex;
-    width:70%;
+    width:1200px;
     padding: 50px 200px 0px 200px;
     color:white;
 }
