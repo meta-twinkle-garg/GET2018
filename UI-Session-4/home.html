@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Contact us</title>
+        <link rel="stylesheet" href="Contact.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <h2>Contact Us Today!</h2>
+        <div id="contact-form">
+        <form action='#'>
+            <div class="input-container">
+                <label>First Name</label>
+                <i class="fas fa-user icon"></i>
+                <input class="input-field" type="text" name="firstName" placeholder="First Name" pattern="[A-Za-z]+" title="Your name contains only alphabets..!">
+            </div>
+            <div class="input-container">
+                <label>Last Name</label>
+                <i class="fas fa-user icon"></i>
+                <input class="input-field" type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z]+" title="Your name contains only alphabets..!">
+            </div>
+            <div class="input-container">
+                <label>E-mail</label>
+                <i class="fas fa-envelope icon"></i>
+                <input class="input-field" type="email" name="email" placeholder="E-mail Address">
+            </div>
+            <div class="input-container">
+                <label>Phone #</label>
+                <i class="fas fa-phone icon" ></i>
+                <input class="input-field" type="text" name="phone" placeholder="(845)555-1212" pattern="[0-9]{10,}" title="Numbers only">
+            </div>
+            <div class="input-container">
+                <label>Address</label>
+                <i class="fas fa-home icon"></i>
+                <input class="input-field" type="text" name="address" placeholder="Address">
+            </div>
+            <div class="input-container">
+                <label>City</label>
+                <i class="fas fa-home icon"></i>
+                <input class="input-field" type="text" name="city" placeholder="city" pattern="[A-Za-z]+" title="Letters only">
+            </div>
+            <div class="input-container">
+                <label>State</label>
+                <i class="fas fa-list-ul icon" ></i>
+                <select class="input-field" name="state" >
+                    <option  disabled selected>Please select your state</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="M.P">Madhya Pradesh</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label>Zip Code</label>
+                <i class="fas fa-home icon"></i>
+                <input class="input-field" type="text" name="zip_code" placeholder="Zip Code" pattern="[0-9]{6}" title="Six letters zip code">
+            </div>
+            <div class="input-container">
+                <label>Website or domain name</label>
+                <i class="fas fa-globe-asia icon"></i>
+                <input class="input-field" type="url" name="city" placeholder="Website or domain name"  pattern="https?://.+" title="Include http://">
+            </div>
+            <div class="input-container">
+                <label>Do you have hosting?</label>
+                <div id="radio-button">
+                <input  type="radio" name="hosting" value="yes">Yes<br>     
+                <input  type="radio" name="hosting" value="no">No
+                    </div>
+            </div>
+            <div class="input-container">
+                <label>Project Description</label>
+                <i class="fas fa-pen icon"></i>
+                <textarea class="input-field" name="description" placeholder="Project Description">
+                </textarea>
+            </div>
+            <div id="send-button">
+            <button class="btn">Send<i class="fab fa-telegram-plane" id="send-icon"></i></button>
+                
+            </div>
+        </form>
+            </div>
+    </body>
+
+</html>
