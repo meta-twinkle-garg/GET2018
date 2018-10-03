@@ -1,0 +1,302 @@
+*{
+    margin: 0px auto;
+    padding: 0px;
+    border: 0px black solid;
+    font-size:20px;
+    font-family: ubuntu, sans-serif;
+}
+
+ul{
+ list-style: none;   
+}
+a{
+       text-decoration: none; 
+}
+body{
+    background-image: url("images/bodybg.png");
+    background-size: contain;
+}
+.heading h1{
+    color:#648CFF;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px 0px;
+}
+.heading p{
+    text-align: center;
+}
+/* Header and footer styling */
+header{
+    color:white;
+    background-color:#648CFF;
+    text-align: center;
+    
+}
+footer{
+    color:white;
+	text-align: center;
+	background-color:#353854;
+}
+
+nav{
+    display:flex; 
+    flex-direction: row;
+    width:1400px;
+}
+
+header img, i{
+    padding:20px 0px;
+}
+footer img, i{
+    padding:20px 0px;
+}
+header a, footer a{
+    color: white;
+    padding: 0px 10px;
+}
+header ul, footer ul{
+    display: inline;
+
+}
+header li, footer li{
+    display: inline;
+
+}
+#header-links, #footer-links{
+    padding: 20px;
+}
+/* End of header and footer */
+
+
+/* Cover styling */
+#cover{
+    display:flex;
+    padding: 150px;
+    background-image: url("images/homebg.png");
+	background-size:cover;
+    height:700px;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+#inner-cover{
+    width:1200px;
+    display: flex;
+}
+#cover h1{
+    padding: 50px 0px;
+    font-size: 4rem;
+}
+#cover-text{
+    padding: 10px 20px;
+    color:white;
+    font-size: 2rem;
+    width:700px;
+}
+#cover-text a{
+    font-size: 1.5rem;
+}
+#download-button{
+    padding: 10px;
+    background-color: #EA6747;
+    color:white;
+}
+#feature-button{
+    padding: 10px;
+    background-color: #3C50A2;
+    color:white;
+}
+/* End of cover style */
+
+/* features styling */
+
+#features{
+    padding: 50px 0px;
+    width:1200px;
+}
+#features-content{
+    display:flex;
+    
+}
+#features h1{
+    font-size: 2rem;
+    padding: 10px;
+}
+.features-content-parts{
+    padding: 50px 15px;
+    display:flex;
+}
+#slider{
+    text-align: center;
+}
+/* End of feature section */
+
+/* Screenshot styling */
+
+#screenshot{
+    width:1200px;
+    display: flex;
+    flex-direction: column;
+}
+.screenshot-content{
+    display: flex;
+    flex-direction: row;
+    padding: 70px 0px;
+    width:auto;
+}
+.screenshot-content h2{
+    padding: 20px 0px;
+    font-size: 2rem;
+}
+#sunny, #cloudy, #rainy{
+    margin: 150px 80px;
+}
+.screenshot-content p{
+    font-size: 1.5rem;
+    padding: 20px 0px;
+    color:dimgrey;
+}
+.screenshot-images{
+    padding: 0px 50px;
+}
+.container{
+    position: relative;
+}
+.watermark-images{
+    font-size: 10rem;
+    position: absolute;
+    left:40px;
+    top: 180px;
+    transform: rotate(90deg);
+    color:#DDDDDD;
+    z-index: -1;
+    width:650px;
+}
+.circle-type{
+    position:absolute;
+    left:300px;
+    top:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+.circle-degree{
+    position:absolute;
+    left:-20px;
+    top:390px;
+    height:80px;
+    width:80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+#cloudy-circle{
+        background-color: #FCEC64;
+}
+#cloudy-degree{
+    background-color: #6CA3FF;
+}
+#sunny-circle{
+        background-color: #F2A14E;
+}
+#sunny-degree{
+    background-color: #FC6A42;
+}
+#rainy-circle{
+        background-color: #B8FAEE;
+}
+#rainy-degree{
+    background-color: #7693C8;
+}
+/* End of screenshot styling */
+
+/* Reviews styling */
+
+#reviews{
+    display: flex;
+    flex-direction: column;
+    width:1200px;
+}
+#review-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+
+}
+#review-content div{
+        width:40%;
+    padding: 20px 20px;
+}
+#review-content p{
+    padding: 20px 0px;
+}
+.quote-end{
+    float:right;
+}
+/* End of reviews styling */
+/* App download styling */
+
+#download-app{
+    background-image: url("images/downloadbg.png");
+}
+#download-app-div{
+    display: flex;
+    width:1200px;
+    padding: 50px 200px 0px 200px;
+    color:white;
+}
+#download-app-div h1{
+    font-size: 2rem;
+}
+#download-app-div p{
+    font-size: 1.25rem;
+    padding: 20px 0px; 
+}
+
+#download-app-div div:nth-child(1){
+    padding: 30px 50px 0px 0px;
+   width:40%;
+}
+/*
+@media(max-width: 1580px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media(max-width: 980px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) { 
+    #header, #footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    #subpart2{
+        flex-wrap: wrap;
+    }
+    .images{
+        height:auto;
+        width:auto;
+        object-fit: contain;
+    }
+}
+
+@media (max-height:600px){
+    
+    .images{
+        height:auto;
+        width:auto;
+        object-fit: contain;
+    }
+}
+*/
