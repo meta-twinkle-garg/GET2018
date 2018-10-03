@@ -1,0 +1,24 @@
+
+#large-text{
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size:2.25rem;
+}
+header{
+    border-bottom: 1px solid #E5E5E5;
+}
+h1{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size:2.5rem;
+}
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+
+h2,h3,h4{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
