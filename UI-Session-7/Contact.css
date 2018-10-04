@@ -1,0 +1,72 @@
+body {
+    background-color: #EFEFEF;
+    margin: 40px;
+}
+
+/* Style the input container */
+.input-container {
+    display: flex;
+    width: 550px;
+    /*  justify-content: space-around;*/
+    margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+    padding: 5px;
+    background-color: #EEEEEE;
+    color: black;
+
+    border: 1px solid #D1D1D1;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+    width: 300px;
+    padding: 5px;
+    outline: none;
+}
+
+label {
+    width: 250px;
+    text-align: right;
+    padding: 0px 20px;
+}
+
+#contact-form {
+    margin: 0px 400px;
+}
+
+#send-button {
+    width: 550px;
+    text-align: center;
+
+}
+
+select {
+    background: -webkit-gradient(linear, left top, left 20, from(#FFFFFF), color-stop(4%, #d2d2d2), to(#FFFFFF));
+
+}
+
+.btn {
+    background-color: #EC9632;
+    color: white;
+    padding: 5px;
+}
+
+#send-icon {
+    padding: 5px;
+    background-color: #EC9632;
+    color: white;
+}
+
+#hosting-radio-div {
+    width: 350px;
+    text-align: left;
+}
+
+.fa-pen {
+    padding: 10px;
+}
