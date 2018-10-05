@@ -43,14 +43,16 @@ function validateForm() {
             break;
 
         case "Haryana":
-
-            zip = document.getElementById('zip-code');
+            zip = document.getElementById("zip-code");
             localStorage.setItem("zip", zip.value);
-            localStorage.setItem("hosting", document.querySelector('input[name=hosting]:checked').value);
             if (zip.value == "") {
                 errorMessage += "Zip Code: Can't be empty\n";
                 zip.style.border = "2px solid red";
             }
+            if (document.querySelector('input[name=hosting]:checked') != undefined) {
+                localStorage.setItem("hosting", document.querySelector('input[name=hosting]:checked').value);
+            }
+
             break;
         case "Maharashtra":
             zip = document.getElementById("zip-code");
