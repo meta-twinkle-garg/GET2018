@@ -1,0 +1,61 @@
+<html>
+    <head>
+    <title>Contact us</title>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script type="text/javascript" src="javaScriptProfile.js"></script>
+</head>
+
+<body onload="setFields()">
+    <h2>Welcome</h2>
+    <div id="contact-form">
+        <form action='#' method="post">
+            <div id="form-fields">
+                <div class="input-container">
+                    <label>First Name</label>
+                    <i class="fas fa-user icon"></i>
+                    <input class="input-field" type="text" id="firstName" name="firstName" placeholder="First Name" title="Your name contains only alphabets..!">
+                </div>
+                <div class="input-container">
+                    <label>Last Name</label>
+                    <i class="fas fa-user icon"></i>
+                    <input class="input-field" type="text" id="lastName" name="lastName" placeholder="Last Name" title="Your name contains only alphabets..!">
+                </div>
+                <div class="input-container">
+                    <label>E-mail</label>
+                    <i class="fas fa-envelope icon"></i>
+                    <input class="input-field" type="text" id="email" name="email" placeholder="E-mail Address">
+                </div>
+                <div class="input-container">
+                    <label>Phone #</label>
+                    <i class="fas fa-phone icon"></i>
+                    <input class="input-field" type="text" id="contact" name="contact" placeholder="(845)555-1212" title="Numbers only">
+                </div>
+                <div class="input-container">
+                    <label>Address</label>
+                    <i class="fas fa-home icon"></i>
+                    <input class="input-field" type="text" id="address" name="address" placeholder="Address">
+                </div>
+                <div class="input-container">
+                    <label>City</label>
+                    <i class="fas fa-home icon"></i>
+                    <input class="input-field" type="text" id="city" name="city" placeholder="city" title="Letters only">
+                </div>
+                <div class="input-container">
+                    <label>State</label>
+                    <i class="fas fa-list-ul icon"></i>
+                    <select class="input-field" id="state" name="state" onchange="appropriateFields()">
+                        <option disabled selected value="">Please select your state</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
