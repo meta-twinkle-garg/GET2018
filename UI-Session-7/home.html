@@ -12,17 +12,17 @@
         <form action='profile.html' method="post">
             <div id="form-fields">
                 <div class="input-container">
-                    <label>First Name</label>
+                    <label id="first-name-label">First Name</label>
                     <i class="fas fa-user icon"></i>
                     <input class="input-field" type="text" id="firstName" name="firstName" placeholder="First Name" title="Your name contains only alphabets..!">
                 </div>
                 <div class="input-container">
-                    <label>Last Name</label>
+                    <label id="last-name-label">Last Name</label>
                     <i class="fas fa-user icon"></i>
                     <input class="input-field" type="text" id="lastName" name="lastName" placeholder="Last Name" title="Your name contains only alphabets..!">
                 </div>
                 <div class="input-container">
-                    <label>E-mail</label>
+                    <label id="email-label">E-mail</label>
                     <i class="fas fa-envelope icon"></i>
                     <input class="input-field" type="text" id="email" name="email" placeholder="E-mail Address">
                 </div>
@@ -42,7 +42,7 @@
                     <input class="input-field" type="text" id="city" name="city" placeholder="city" title="Letters only">
                 </div>
                 <div class="input-container">
-                    <label>State</label>
+                    <label id="state-label">State</label>
                     <i class="fas fa-list-ul icon"></i>
                     <select class="input-field" id="state" name="state" onchange="appropriateFields()">
                         <option disabled selected value="">Please select your state</option>
@@ -58,7 +58,9 @@
 
 
             </div>
-
+            <div id="mandatory">
+            <p>Fields marked with <span>*</span> are mandatory..!</p>
+            </div>
 
         </form>
     </div>
