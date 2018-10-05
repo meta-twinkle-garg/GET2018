@@ -70,3 +70,19 @@ select {
 .fa-pen {
     padding: 10px;
 }
+
+label[id*='first-name-label']::after {content: "*"; color:red;} 
+label[id*='last-name-label']::after {content: "*"; color:red;} 
+label[id*='email-label']::after {content: "*"; color:red;} 
+label[id*='state-label']::after {content: "*"; color:red;} 
+label[id*='project-description-label']::after {content: "*"; color:red;} 
+label[id*='zip-label']::after {content: "*"; color:red;} 
+
+#mandatory span{
+    color:red;
+}
+#mandatory{
+    padding: 20px;
+    text-align: center;
+    width:550px;
+}
