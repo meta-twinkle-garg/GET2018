@@ -1,14 +1,14 @@
 function validateForm() {
-    var firstName, lastName, email, contact, city, state, errorMessage, zip, projectDescription;
+    var firstName, lastName, email, contact, city, state, errorMessage, zip, projectDescription, hosting;
     errorMessage = "";
     firstName = validateFirstName();
     lastName = validateLastName();
     email = validateEmail();
     contact = validateContact();
     city = validateCity();
-    state = document.getElementById("state").value;
-
-
+    state = document.getElementById("state");
+    localStorage.setItem("state", state.value);
+    localStorage.setItem("address", document.getElementById("address").value);
     if (firstName != "valid") {
         errorMessage += firstName + "\n";
     }
@@ -24,27 +24,39 @@ function validateForm() {
     if (city != "valid") {
         errorMessage += city + "\n";
     }
-    switch (state) {
+
+
+    switch (state.value) {
         case "":
             errorMessage += "State: Please select an option";
+            state.style.border = "2px solid red";
             break;
-        case "Haryana":
-            zip = document.getElementById('zip-code');
-            if (zip.value == "") {
-                errorMessage += "Zip Code: Can't be empty\n";
-                zip.style.border = "2px solid red";
-            }
-            break;
+
         case "Rajasthan":
             projectDescription = document.getElementById("description");
+            localStorage.setItem("projectDescription", projectDescription.value);
+            localStorage.setItem("website", document.getElementById('website').value);
             if (projectDescription.value == "") {
                 errorMessage += "Project Description: Can't be empty\n";
                 projectDescription.style.border = "2px solid red";
             }
             break;
+
+        case "Haryana":
+
+            zip = document.getElementById('zip-code');
+            localStorage.setItem("zip", zip.value);
+            localStorage.setItem("hosting", document.querySelector('input[name=hosting]:checked').value);
+            if (zip.value == "") {
+                errorMessage += "Zip Code: Can't be empty\n";
+                zip.style.border = "2px solid red";
+            }
+            break;
         case "Maharashtra":
             zip = document.getElementById("zip-code");
+            localStorage.setItem("zip", zip.value);
             projectDescription = document.getElementById("description");
+            localStorage.setItem("projectDescription", projectDescription.value);
             if (zip.value == "") {
                 errorMessage += "Zip Code: Can't be empty\n";
                 zip.style.border = "2px solid red";
@@ -57,6 +69,7 @@ function validateForm() {
         default:
             break;
     }
+
 
     if (errorMessage.length == 0) {
         return true;
@@ -77,6 +90,7 @@ function validateFirstName() {
         return "First Name: Invalid input type";
     } else {
         first.style.border = "none";
+        localStorage.setItem("firstName", first.value);
         return "valid";
     }
 }
@@ -93,6 +107,7 @@ function validateLastName() {
         return "Last Name: Invalid input type";
     } else {
         last.style.border = "none";
+        localStorage.setItem("lastName", last.value);
         return "valid";
     }
 }
@@ -110,6 +125,7 @@ function validateEmail() {
         var dot = email.value.indexOf('.');
         if (atTheRate >= 1 && dot > atTheRate + 1 && dot < email.value.length - 3) {
             email.style.border = "none";
+            localStorage.setItem("email", email.value);
             return "valid";
         } else {
             email.style.border = "2px solid red";
@@ -124,12 +140,14 @@ function validateEmail() {
 function validateContact() {
     var contact = document.getElementById("contact");
     if (contact.value.length == 0) {
+        localStorage.setItem("contact", "");
         return "valid";
     }
     if (contact.value.length > 9) {
         var re = /^[0-9]+$/;
         if (re.test(contact.value)) {
             contact.style.border = "none";
+            localStorage.setItem("contact", contact.value);
             return "valid";
         } else {
             contact.style.border = "2px solid red";
@@ -149,6 +167,7 @@ function validateCity() {
         return "City: Invalid input format";
     } else {
         city.style.border = "none";
+        localStorage.setItem("city", city.value);
         return "valid";
     }
 }
@@ -242,6 +261,7 @@ function addHosting() {
     var inputField = document.createElement('input');
     inputField.setAttribute("type", "radio");
     inputField.setAttribute("value", "Yes");
+    inputField.setAttribute("id", "radioYes");
     inputField.setAttribute("name", "hosting");
     div2.appendChild(inputField);
     var spanYes = document.createElement('span');
@@ -252,6 +272,7 @@ function addHosting() {
     var inputField2 = document.createElement('input');
     inputField2.setAttribute("type", "radio");
     inputField2.setAttribute("value", "No");
+    inputField.setAttribute("id", "radioNo");
     inputField2.setAttribute("name", "hosting");
     div2.appendChild(inputField2);
     var spanNo = document.createElement('span');
