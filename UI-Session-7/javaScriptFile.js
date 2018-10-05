@@ -1,4 +1,5 @@
 function validateForm() {
+    localStorage.clear();
     var firstName, lastName, email, contact, city, state, errorMessage, zip, projectDescription, hosting;
     errorMessage = "";
     firstName = validateFirstName();
@@ -197,6 +198,7 @@ function addZipCode() {
     div1.setAttribute("id", "zip-div");
     var label = document.createElement("label");
     label.innerHTML = "Zip Code";
+    label.setAttribute("id","zip-label");
     div1.appendChild(label);
     var icon = document.createElement('i');
     icon.setAttribute("class", "fas fa-home icon");
@@ -204,7 +206,6 @@ function addZipCode() {
     var inputField = document.createElement('input');
     inputField.setAttribute("class", "input-field");
     inputField.setAttribute("type", "text");
-    inputField.required = true;
     inputField.setAttribute("id", "zip-code");
     inputField.setAttribute("placeholder", "Zip Code");
     inputField.setAttribute("title", "Six letters zip code");
@@ -227,7 +228,6 @@ function addWebsiteDomain() {
     inputField.setAttribute("type", "text");
     inputField.setAttribute("id", "website");
     inputField.setAttribute("placeholder", "Website or domain name");
-    inputField.setAttribute("title", "Include http://");
     div1.appendChild(inputField);
     document.getElementById('form-fields').appendChild(div1);
 }
@@ -238,6 +238,7 @@ function addProjectDescription() {
     div1.setAttribute("id", "description-div");
     var label = document.createElement("label");
     label.innerHTML = "Project Description";
+    label.setAttribute("id","project-description-label");
     div1.appendChild(label);
     var icon = document.createElement('i');
     icon.setAttribute("class", "fas fa-pen icon");
