@@ -22,9 +22,9 @@ Queue.prototype.isEmpty=function()
 
 Queue.prototype.printQueue=function() 
 { 
-    var str = ""; 
-    for(var i = 0; i < this.items.length; i++) 
-        str += this.items[i] +" "; 
-    return str; 
+    var queueItems = ""; 
+    for(var count = 0; count < this.items.length; count++) 
+        queueItems += this.items[count] +" "; 
+    return queueItems; 
 } 
 
