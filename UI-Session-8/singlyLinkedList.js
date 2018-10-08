@@ -33,29 +33,29 @@ function add(element) {
 
 function removeElement(element) {
     var current = this.head;
-    var prev = null;
+    var previous = null;
     while (current != null) {
 
         if (current.element == element) {
-            if (prev == null) {
+            if (previous == null) {
                 this.head = current.next;
             } else {
-                prev.next = current.next;
+                previous.next = current.next;
             }
             this.size--;
             return current.element;
         }
-        prev = current;
+        previous = current;
         current = current.next;
     }
 }
 
 function printList() {
-    var curr = this.head;
-    var str = "";
-    while (curr) {
-        str += curr.element + " ";
-        curr = curr.next;
+    var current = this.head;
+    var string = "";
+    while (current) {
+        string += current.element + " ";
+        current = current.next;
     }
-    console.log(str);
+    console.log(string);
 }
