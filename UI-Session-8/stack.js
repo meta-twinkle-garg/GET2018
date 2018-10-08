@@ -19,8 +19,8 @@ Stack.prototype.isEmpty = function () {
 }
 
 Stack.prototype.printStack = function () {
-    var str = "";
-    for (var i = 0; i < this.items.length; i++)
-        str += this.items[i] + " ";
-    return str;
+    var string = "";
+    for (var count = 0; count < this.items.length; count++)
+        string += this.items[count] + " ";
+    return string;
 }
