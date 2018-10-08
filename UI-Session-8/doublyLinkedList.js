@@ -12,32 +12,32 @@ function LinkedList() {
 } 
 
 function remove(item) { 
-    var currNode = this.head;
-    while (currNode.element != item) { 
-        currNode = currNode.next; 
+    var currentNode = this.head;
+    while (currentNode.element != item) { 
+        currentNode = currentNode.next; 
     } 
-    if (!(currNode.next == null)) { 
-        currNode.previous.next = currNode.next; 
-        currNode.next.previous = currNode.previous; 
-        currNode.next = null; 
-        currNode.previous = null; 
+    if (!(currentNode.next == null)) { 
+        currentNode.previous.next = currentNode.next; 
+        currentNode.next.previous = currentNode.previous; 
+        currentNode.next = null; 
+        currentNode.previous = null; 
     } 
 } 
 
 function display() { 
-    var currNode = this.head; 
-    while (!(currNode.next == null)) { 
-        console.log(currNode.next.element); 
-        currNode = currNode.next; 
+    var currentNode = this.head; 
+    while (!(currentNode.next == null)) { 
+        console.log(currentNode.next.element); 
+        currentNode = currentNode.next; 
     } 
 } 
 
 function insert(newElement) { 
     var newNode = new Node(newElement); 
-    var currNode = this.head;
-    while (currNode.next != null) { 
-        currNode = currNode.next; 
+    var currentNode = this.head;
+    while (currentNode.next != null) { 
+        currentNode = currentNode.next; 
     } 
-    newNode.previous = currNode; 
-    currNode.next = newNode; 
+    newNode.previous = currentNode; 
+    currentNode.next = newNode; 
 } 
