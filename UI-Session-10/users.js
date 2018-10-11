@@ -1,20 +1,31 @@
 var userManagement = angular.module('userManagement', []);
 
-// Define the `PhoneListController` controller on the `phonecatApp` module
-userManagement.controller('UserManagementController', function UserManagementController($scope) {
-  $scope.users = [
-    {
-      name: 'Akshat',
-      phone: '1234567890',
-      location: 'Jaipur'
-    }, {
-      name: 'Akshat',
-      phone: '1234567890',
-      location: 'Jaipur'
-    }, {
-      name: 'Rahul',
-      phone: '1234567890',
-      location: 'Delhi'
+userManagement.controller('UserManagementController', function UserManagementController($scope, $http) {
+    $scope.getData = function () {
+        $http.get('userDetails.json').then(function (response) {
+            $scope.users = response.data;
+        });
     }
-  ];
+    $scope.submit = function () {
+        user = {
+            name: $scope.name,
+            phone: $scope.phone,
+            location: $scope.location
+
+        };
+        $scope.users.push(user);
+//        $http.post('userDetails.json', $scope.users);
+    };
+    $scope.editUser = function (userId) {
+        $scope.users.forEach(function(user){
+            if (userId == user.id) {
+                $scope.id= user.id;
+
+                $scope.name= user.name;
+                $scope.phone= user.phone;
+                $scope.location= user.location;
+            }
+        }); 
+
+    };
 });
