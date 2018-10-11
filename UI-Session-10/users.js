@@ -28,4 +28,14 @@ userManagement.controller('UserManagementController', function UserManagementCon
         }); 
 
     };
+    $scope.save = function () {
+        $scope.users.forEach(function(user){
+            if ($scope.id == user.id) {
+                user.name=$scope.name;
+                user.phone=$scope.phone;
+                user.location=$scope.location;
+            }
+        }); 
+
+    };
 });
