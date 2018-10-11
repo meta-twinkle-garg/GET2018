@@ -68,7 +68,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form method=POST ng-submit="submit(name,phone,location)">
+                    <form method=POST>
                         <div class="py-1">
                             <label for="name">
                                 Name<br>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-light mx-5" data-dismiss="modal">Cancel</button>
-                            <input type="submit" class="btn btn-primary" id="submit" value="Save">
+                            <input type="submit" class="btn btn-primary" id="submit" ng-click="submit()" data-dismiss="modal" value="Save">
                         </div>
                     </form>
                 </div>
@@ -109,7 +109,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form method=POST ng-submit="submit(name,phone,location)">
+                    <form method=POST>
                         <div class="py-1">
                             <label for="name">
                                 Name<br>
@@ -130,7 +130,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-light mx-5" data-dismiss="modal">Cancel</button>
-                            <input type="submit" class="btn btn-primary" id="submit" value="Save">
+                            <input type="submit" class="btn btn-primary"  ng-click="save()" id="submit" data-dismiss="modal" value="Save">
                         </div>
                     </form>
                 </div>
