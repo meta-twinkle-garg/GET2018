@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "image": "images/spinach.jpg",
+      "title": "Spinach",
+      "price": 2.5,
+      "category": "Vegetables",
+      "quantity": 0
+    },
+    {
+      "id": "2",
+      "image": "images/bread.jpg",
+      "title": "Freshly Baked Bread",
+      "price": 3,
+      "category": "Bread",
+      "quantity": 5
+    },
+    {
+      "id": "3",
+      "image": "images/apricot.jpg",
+      "title": "Apricots",
+      "price": 1.7,
+      "category": "Fruits",
+      "quantity": 0
+    }
+  ],
+  "categories": [
+    {
+      "name": "Bread"
+    },
+    {
+      "name": "Dairy"
+    },
+    {
+      "name": "Fruits"
+    },
+    {
+      "name": "Seasonings and Spices"
+    },
+    {
+      "name": "Vegetables"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "quantity": 0,
+      "image": "images/spinach.jpg",
+      "price": 2.5,
+      "title": "Spinach"
+    },
+    {
+      "id": "2",
+      "quantity": 5,
+      "image": "images/bread.jpg",
+      "price": 3,
+      "title": "Freshly Baked Bread"
+    },
+    {
+      "id": "3",
+      "quantity": 0,
+      "image": "images/apricot.jpg",
+      "price": 1.7,
+      "title": "Apricots"
+    }
+  ],
+  "total": {
+    "items": 5,
+    "amount": 15
+  }
+}

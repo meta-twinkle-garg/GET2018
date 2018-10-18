@@ -1,0 +1,86 @@
+<header class="border-bottom">
+    <nav class="navbar navbar-expand navbar-light d-flex justify-content-between mx-5">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#"><i class="fas fa-leaf"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/cart"><i class="fas fa-shopping-cart"></i><span class="badge badge-warning">{{totalItems}}</span></a>
+            </li>
+        </ul>
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-dark"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                John Doe
+            </a>
+            <div class="dropdown-menu float-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">My Orders</a>
+                <a class="dropdown-item" href="#">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="mx-4">
+    <h1 class="p-2">
+        Shopping Cart
+    </h1>
+    <div class="row">
+        <div class="col-8 border">
+            <div class="row p-2 m-2 border-bottom">
+                <div class="col-6">
+                    <h3>You have {{totalItems}} items in your cart.</h3>
+                </div>
+                <div class="col-6 text-right">
+                    <button class="btn btn-sm light">Clear Shopping Cart</button>
+                </div>
+            </div>
+            <div class="row p-2 m-2 text-center border-bottom">
+                <div class="col-2"></div>
+                <div class="col-3">
+                    <h3>Product</h3>
+                </div>
+                <div class="col-5">
+                    <h3>Quantity</h3>
+                </div>
+                <div class="col-2">
+                    <h3>Price</h3>
+                </div>
+            </div>
+            <div class="row border-bottom" ng-repeat="cartItem in cartItems" ng-if="cartItem.quantity>0">
+<!--                <section ng-if="cartItem.quantity>0">-->
+                <div class="col-2 pr-3">
+                    <img src="{{cartItem.image}}" class="rounded-circle" height="100px" width="100px">
+                </div>
+                <div class="col-3 pr-3 text-center">
+                    {{cartItem.title}}
+                </div>
+<div class="col-1 mx-3"></div>
+            <div class="col-3 px-3 text-right">
+                <div class="input-group mb-3 text-center">
+                    <div class="input-group-prepend text-center">
+                        <button class="btn btn-dark btn-sm text-center" ng-click="decreaseQuantity(cartItem)" id="minus-btn"><i class="fa fa-minus"></i></button>
+                    </div>
+                    <div class="text-center col-6">{{cartItem.quantity}} in cart </div>
+                    <div class="input-group-prepend">
+                        <button class="btn btn-dark btn-sm text-center" ng-click="increaseQuantity(cartItem)" id="plus-btn"><i class="fa fa-plus"></i></button>
+                    </div>
+
+                </div>
+            </div>
+                <div class="col-2 text-center">
+                    $ {{cartItem.price*cartItem.quantity}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-right col-12 px-5 border-bottom">
+                    $ {{total.amount}}
+                </div>
+            </div>
+
+            <div class="m-2">
+                <a href="#"><button ng-if="totalItems>0" class="btn btn-primary">Checkout</button></a>
+            </div>
+
+        </div>
+    </div>
+</div>
