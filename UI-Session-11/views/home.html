@@ -1,0 +1,42 @@
+    <header class="border-bottom">
+        <nav class="navbar navbar-expand navbar-light d-flex justify-content-between mx-5">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#"><i class="fas fa-leaf"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/cart"><i class="fas fa-shopping-cart"></i><span class="badge badge-warning">{{totalItems}}</span></a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <a class="nav-link dropdown-toggle text-dark"id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    John Doe
+                </a>
+                <div class="dropdown-menu float-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">My Orders</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<div class="row mx-5 my-3">
+    <ul class="nav col-2 flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <li><a href="#" class="active nav-link border" data-toggle="pill">All categories</a></li>
+        <li><a href="#!/category/{{category.name}}" data-toggle="pill" class="border nav-link" ng-repeat="category in categories">{{category.name}}</a></li>
+    </ul>
+    <div class="col-8 d-flex flex-wrap">
+        <div class="card col-5 m-4" ng-repeat="product in products | filter:categoryName">
+            <img class="card-img-top" src={{product.image}} height="200px">
+            <div class="card-body">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">${{product.price}}</p>
+                <p class="card-text" ng-model="quantity">{{product.quantity}}</p>
+            </div>
+            <div id="addItem">
+                <a href="#"><button ng-click="addItem(product)" class="btn btn-secondary btn-lg btn-block">Add To Cart</button></a>
+                </div>
+        </div>
+
+    </div>
+</div>
